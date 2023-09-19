@@ -12,13 +12,13 @@
 
 ### Install Helm
 * Helm 설치하기
->$ curl -fsSL -o get_helm.sh `https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3` </br>
-$ chmod 700 get_helm.sh </br>
-$ ./get_helm.sh
+  >$ curl -fsSL -o get_helm.sh `https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3` </br>
+  $ chmod 700 get_helm.sh </br>
+  $ ./get_helm.sh
 
 * Helm 자동 완성 기능 설치하기
-> $ source <(helm completion bash) </br>
-$ echo "source <(helm completion bash)" >> ~/.bashrc
+  > $ source <(helm completion bash) </br>
+  $ echo "source <(helm completion bash)" >> ~/.bashrc
 
 </br>
 
@@ -31,31 +31,31 @@ $ echo "source <(helm completion bash)" >> ~/.bashrc
 
 ### Helm Command
 * Repository 추가/삭제
-> $ helm repo [add|remove|list] [NAME] [URL]
+  > $ helm repo [add|remove|list] [NAME] [URL]
 
 * Repository 조회 
-> $ helm repo list
+  > $ helm repo list
 
 * Repository에서 제공하는 chart 검색
-> $ helm search repo </br>
-> $ helm search repo [KEYWORD]
+  > $ helm search repo </br>
+  > $ helm search repo [KEYWORD]
 
 * chart 정보와 세부 정보 조회 
-> $ helm show chart [CHART] </br>
-> $ helm inspect values [CHART]
+  > $ helm show chart [CHART] </br>
+  > $ helm inspect values [CHART]
 
 * chart 조회
-> $ helm list
+  > $ helm list
 
 * 특정 value 수정해서 chart 설치
-> $ helm install webserver --set service.type=NodePort  bitnami/nginx
+  > $ helm install webserver --set service.type=NodePort  bitnami/nginx
 
 * value.yaml 파일을 수정하여 chart 설치
-> $ helm inspect values bitnami/nginx > nginx_value.yaml </br>
--> nginx_value.yml을 수정해서 적용시킨다. 
+  > $ helm inspect values bitnami/nginx > nginx_value.yaml </br>
+  -> nginx_value.yml을 수정해서 적용시킨다. 
 
 * chart archive 설치
-> $ helm install [chart_name] [CHART]
+  > $ helm install [chart_name] [CHART]
 
 * chart archive 삭제
-> $ helm uninstall [chart_name]
+  > $ helm uninstall [chart_name]
